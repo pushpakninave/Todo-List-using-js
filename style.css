@@ -160,3 +160,22 @@ p{
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width:900px) {
+  header {
+    font-size: 1rem;
+  }
+  form{
+    flex-direction: column;
+  }
+  .left-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .right-box{
+    display: flex;
+  }
+  form input{
+    width: 70%;
+  }
+}
