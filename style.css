@@ -61,7 +61,7 @@ form button {
 }
 
 form button:hover {
-  background: #003799;
+  background: #02737e;
   color: #ff6f47;
 }
 
@@ -179,7 +179,7 @@ select {
 }
 
 .select:hover::after {
-  background: #003799;
+  background: #02737e;
   color: #ff6f47;
 }
 
