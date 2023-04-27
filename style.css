@@ -1,29 +1,50 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   color: white;
   font-family: "Poppins", sans-serif;
-  height: 100vh; 
+  height: 100vh;
 }
-.todoBody{
-  background-image: linear-gradient(to right top, #001b44, #00296d, #003799, #0043c6, #004ff3);
+
+.todoBody {
+  background-image: linear-gradient(to right top, #003439, #003b40, #004248, #01494f, #015057);
+  /* background-image: linear-gradient(to right top, #008e9b, #007871, #146148, #214a24, #243303); */
+  /* background-image: linear-gradient(to right top, #001b44, #00296d, #003799, #0043c6, #004ff3); */
   min-height: 100%;
 }
+
+.socials {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  padding: 15px;
+  border-radius: 5px;
+  background: #02737e;
+  box-shadow: -20px -20px 60px #01444a,
+    20px 20px 60px #015c64;
+}
+
+
+/* .socials:hover {} */
+
 header {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 header,
 form {
-    min-height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 form input,
 form button {
   padding: 0.5rem;
@@ -31,25 +52,31 @@ form button {
   border: none;
   background: white;
 }
+
 form button {
   color: #ff6f47;
   background: #f7fffe;
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 form button:hover {
   background: #003799;
   color: #ff6f47;
 }
-.todo-container{
+
+.todo-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .todo-list {
   min-width: 30%;
   list-style: none;
+  max-width: 90%;
 }
+
 .todo {
   margin: 0.5rem;
   background: white;
@@ -60,13 +87,17 @@ form button:hover {
   align-items: center;
   transition: all 1s ease;
   border-radius: 5px;
-  box-shadow:  -25px 0px 49px #00225f,
-             25px 25px 49px #004cd3;
+  /* background: #015057; */
+  box-shadow: -20px -20px 60px #01444a,
+    20px 20px 60px #015c64;
 }
+
 .todo li {
   flex: 1;
 }
-.trash-btn,.complete-btn {
+
+.trash-btn,
+.complete-btn {
   background: #003799;
   color: white;
   border: none;
@@ -74,9 +105,11 @@ form button:hover {
   cursor: pointer;
   font-size: 1rem;
 }
+
 .complete-btn {
   background: rgb(11, 212, 162);
 }
+
 .todo-item {
   padding: 0rem 0.5rem;
 }
@@ -85,22 +118,26 @@ form button:hover {
 .fa-check {
   pointer-events: none;
 }
+
 .todo-item {
   padding: 0rem 0.5rem;
 }
 
 .fa-trash,
-.fa-check{
+.fa-check {
   pointer-events: none;
 }
+
 .completed {
   text-decoration: line-through;
   opacity: 0.5;
 }
+
 .fall {
   transform: translateY(10rem) rotateZ(0deg);
   opacity: 0;
 }
+
 /*CUSTOM SELECTOR */
 select {
   -webkit-appearance: none;
@@ -119,6 +156,7 @@ select {
   position: relative;
   overflow: hidden;
 }
+
 select {
   color: #003799;
   font-family: "Poppins", sans-serif;
@@ -127,6 +165,7 @@ select {
   padding: 1rem;
   font-size: 1rem;
 }
+
 /* Arrow */
 .select::after {
   content: "\25BC";
@@ -138,44 +177,57 @@ select {
   cursor: pointer;
   pointer-events: none;
 }
-.select:hover::after{
+
+.select:hover::after {
   background: #003799;
   color: #ff6f47;
 }
-.author{
+
+.author {
   bottom: 0;
   position: fixed;
   width: 100%;
 }
-a{
+
+a {
   text-decoration: none;
   color: #fff;
 }
-a:hover{
-  color:#ff6f47;
+
+a:hover {
+  color: #ff6f47;
 }
-p{
+
+p {
   font-size: 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 @media screen and (max-width:900px) {
   header {
     font-size: 1rem;
   }
-  form{
+
+  form {
     flex-direction: column;
   }
-  .left-box{
+
+  .left-box {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .right-box{
+
+  .right-box {
     display: flex;
   }
-  form input{
+
+  form input {
     width: 70%;
+  }
+  .socials{
+    padding: 7px;
   }
 }
