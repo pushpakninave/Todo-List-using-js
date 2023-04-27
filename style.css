@@ -9,25 +9,38 @@ body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
 }
-
 .todoBody {
   background-image: linear-gradient(to right top, #003439, #003b40, #004248, #01494f, #015057);
-  /* background-image: linear-gradient(to right top, #008e9b, #007871, #146148, #214a24, #243303); */
-  /* background-image: linear-gradient(to right top, #001b44, #00296d, #003799, #0043c6, #004ff3); */
   min-height: 100%;
 }
-
+.edit-author-btn{
+  position: absolute;
+  cursor: pointer;
+  top: 70px;
+  right: 10px;
+  /* font-size: 1.5rem; */
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 5px;
+  background: #02737e;
+  box-shadow: -20px -20px 60px #01444a,
+  20px 20px 60px #015c64;
+}
+.edit-author-btn:hover{
+  color:#ff6f47;
+}
 .socials {
   position: absolute;
   cursor: pointer;
   top: 10px;
   right: 10px;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
+  margin: 10px;
   padding: 15px;
   border-radius: 5px;
   background: #02737e;
   box-shadow: -20px -20px 60px #01444a,
-    20px 20px 60px #015c64;
+  20px 20px 60px #015c64;
 }
 
 
@@ -192,8 +205,12 @@ select {
 a {
   text-decoration: none;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
 }
-
 a:hover {
   color: #ff6f47;
 }
@@ -207,6 +224,7 @@ p {
 
 @media screen and (max-width:900px) {
   header {
+    /* padding-top: 100px; */
     font-size: 1rem;
   }
 
@@ -228,6 +246,13 @@ p {
     width: 70%;
   }
   .socials{
-    padding: 7px;
+    padding: 10px 10px;
+    margin:0px;
+  }
+  
+  .edit-author-btn{
+    padding: 5px 10px;
+    margin: 0px;
+    top:60px; 
   }
 }

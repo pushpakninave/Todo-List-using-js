@@ -1,14 +1,18 @@
 // Selectors
+const authorName = document.querySelector(".edit-author-btn")
 const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 const filterOption = document.querySelector(".filter-todo");
 
+
 // EventListeners
 document.addEventListener("DOMContentLoaded", getTodos);
+document.addEventListener("DOMContentLoaded", getAuthor);
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
 filterOption.addEventListener("click", filterTodo);
+authorName.addEventListener("click", changeAuthor);
 
 // Functions
 function addTodo(event) {
@@ -27,7 +31,7 @@ function addTodo(event) {
     newTodo.classList.add("todo-item");
 
     // Add todo to localstorage. 
-    if(todoInput.value!=""){
+    if (todoInput.value != "") {
         saveLocalTodos(todoInput.value);
     }
     // check mark button
@@ -179,7 +183,7 @@ function getTodos() {
             ...    
          </ul>
          */
-            todoList.append(todoDiv);
+        todoList.append(todoDiv);
     })
 }
 function removeLocalTodos(todo) {
@@ -196,4 +200,42 @@ function removeLocalTodos(todo) {
     todos.splice(todos.indexOf(todoIndex), 1);
     // console.log(todos.indexOf("pushpak"));
     localStorage.setItem("todos", JSON.stringify(todos));
+}
+function changeAuthor() {
+    let authorName = prompt("enter your name");
+    if(authorName!=null){
+        authorName = authorName + "'s";
+    }
+    console.log(authorName);
+    if (authorName != "'s" && authorName != null) {
+        document.querySelector(".author-name").innerHTML = authorName;
+        saveAuthor(authorName);
+    } else {
+        document.querySelector(".author-name").innerHTML = "_____"
+    }
+}
+// save author name into the local storage.
+function saveAuthor(author) {
+    let authorName;
+    // if there is no such entity in the local storage the initiate it
+    if (localStorage.getItem("authorName") === null) {
+        authorName = "_____";
+    } else {
+        authorName = JSON.parse(localStorage.getItem("authorName"));
+    }
+    // -----
+    if (authorName != author) {
+        authorName = author;
+        localStorage.setItem("authorName", JSON.stringify(authorName));
+    }
+}
+function getAuthor() {
+    let authorName;
+    if (localStorage.getItem("authorName") === null) {
+        authorName = "_____";
+    } else {
+        authorName = JSON.parse(localStorage.getItem("authorName"));
+        console.log(authorName);
+        document.querySelector(".author-name").innerHTML = authorName;
+    }
 }
