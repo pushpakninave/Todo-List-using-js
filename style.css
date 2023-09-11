@@ -9,11 +9,13 @@ body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
 }
+
 .todoBody {
   background-image: linear-gradient(to right top, #003439, #003b40, #004248, #01494f, #015057);
   min-height: 100%;
 }
-.edit-author-btn{
+
+.edit-author-btn {
   position: absolute;
   cursor: pointer;
   top: 70px;
@@ -24,11 +26,13 @@ body {
   border-radius: 5px;
   background: #02737e;
   box-shadow: -20px -20px 60px #01444a,
-  20px 20px 60px #015c64;
+    20px 20px 60px #015c64;
 }
-.edit-author-btn:hover{
-  color:#ff6f47;
+
+.edit-author-btn:hover {
+  color: #ff6f47;
 }
+
 .socials {
   position: absolute;
   cursor: pointer;
@@ -40,7 +44,7 @@ body {
   border-radius: 5px;
   background: #02737e;
   box-shadow: -20px -20px 60px #01444a,
-  20px 20px 60px #015c64;
+    20px 20px 60px #015c64;
 }
 
 
@@ -149,6 +153,7 @@ form button:hover {
 .fall {
   transform: translateY(10rem) rotateZ(0deg);
   opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 /*CUSTOM SELECTOR */
@@ -196,9 +201,13 @@ select {
   color: #ff6f47;
 }
 
+.work-section {
+  min-height: 75vh;
+}
+
 .author {
-  bottom: 0;
-  position: fixed;
+  position: relative;
+  /* border: #f8f8f8 5px solid; */
   width: 100%;
 }
 
@@ -211,6 +220,7 @@ a {
   align-items: center;
   font-size: 0.9rem;
 }
+
 a:hover {
   color: #ff6f47;
 }
@@ -245,14 +255,51 @@ p {
   form input {
     width: 70%;
   }
-  .socials{
+
+  .socials {
     padding: 10px 10px;
-    margin:0px;
+    margin: 0px;
   }
-  
-  .edit-author-btn{
+
+  .edit-author-btn {
     padding: 5px 10px;
     margin: 0px;
-    top:60px; 
+    top: 60px;
+  }
+}
+
+@media screen and (max-width:300px) {
+  header {
+    /* padding-top: 100px; */
+    font-size: 1rem;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  .left-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right-box {
+    display: flex;
+  }
+
+  form input {
+    width: 70%;
+  }
+
+  .socials {
+    padding: 10px 10px;
+    margin: 0px;
+  }
+
+  .edit-author-btn {
+    padding: 5px 10px;
+    margin: 0px;
+    top: 60px;
   }
 }

@@ -198,12 +198,11 @@ function removeLocalTodos(todo) {
     }
     const todoIndex = todo.childNodes[0].innerText;
     todos.splice(todos.indexOf(todoIndex), 1);
-    // console.log(todos.indexOf("pushpak"));
     localStorage.setItem("todos", JSON.stringify(todos));
 }
 function changeAuthor() {
     let authorName = prompt("enter your name");
-    if(authorName!=null){
+    if (authorName != null) {
         authorName = authorName + "'s";
     }
     console.log(authorName);

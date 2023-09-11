@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
         integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
-    <link rel = "icon" href = "https://thumbs.dreamstime.com/b/simple-list-checklist-icon-blue-background-thin-line-98653523.jpg"  type = "image/x-icon">
+    <link rel="icon"
+        href="https://thumbs.dreamstime.com/b/simple-list-checklist-icon-blue-background-thin-line-98653523.jpg"
+        type="image/x-icon">
 </head>
 
 <body>
@@ -25,28 +27,31 @@
             </a>
         </div>
         <header>
-            <h1> <author style="color:#ff6f47;" class="author-name" title="edit author"> _____'s</author> Todo List</h1>
+            <h1>
+                <author style="color:#ff6f47;" class="author-name" title="edit author"> _____'s</author> Todo List
+            </h1>
         </header>
-
-        <form action="">
-            <div class="left-box">
-                <input type="text" class="todo-input" />
-                <button class="todo-button" type="submit">
-                    <i class="fas fa-plus-square"></i>
-                </button>
-            </div>
-            <div class="right-box">
-                <div class="select">
-                    <select name="todos" class="filter-todo">
-                        <option value="all">All</option>
-                        <option value="done">Done</option>
-                        <option value="pending">Pending</option>
-                    </select>
+        <div class="work-section">
+            <form action="">
+                <div class="left-box">
+                    <input type="text" class="todo-input" />
+                    <button class="todo-button" type="submit">
+                        <i class="fas fa-plus-square"></i>
+                    </button>
                 </div>
+                <div class="right-box">
+                    <div class="select">
+                        <select name="todos" class="filter-todo">
+                            <option value="all">All</option>
+                            <option value="done">Done</option>
+                            <option value="pending">Pending</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <div class="todo-container">
+                <ol class="todo-list"></ol>
             </div>
-        </form>
-        <div class="todo-container">
-            <ol class="todo-list"></ol>
         </div>
         <div class="author">
             <a target="_blank" title="profile" href="https://pushpakninave.github.io/profile/">
